@@ -28,7 +28,7 @@ public class BodyPartQuiz {
 
 	JFrame window = new JFrame();
 	JPanel panel = new JPanel();
-
+	int score = 0;
 	public void run() {
 		initializeGui();
 		startQuiz();
@@ -42,22 +42,31 @@ public class BodyPartQuiz {
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
-
+		window.setSize(200, 170);
+		
+		window.setTitle("Score = "+ score);
 		showNextImage();
 
 	}
 
 	private void startQuiz() {
-
+		
 		// 1. Make an int variable to hold the score.
-
+		
 		// 2. Set the size of the window in the initializeGui() method 
-
+		
 		// 4. Ask the user who this person is and store their answer
-		String guess = JOptionPane.showInputDialog("who is this?");
+		String guess = JOptionPane.showInputDialog("who is this?(First Name)");
+		if(guess.contains("rnold")) {
+			JOptionPane.showMessageDialog(null, "Correct");
+			score+=1; 	window.setTitle("Score = "+ score);
+		}
+		else{
+			JOptionPane.showMessageDialog(null, "INcorrect\nAnswer: Arnold Schwarzenegger");
+		
+		}
+			// 5. Check their answer. If they guessed correctly:
 
-		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
 
 		// 6. Otherwise:
@@ -65,8 +74,34 @@ public class BodyPartQuiz {
 
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
-
-		// 8. .... repeat 4-7 for all your images.....
+		String guess1 = JOptionPane.showInputDialog("who is this?(First Name)");
+		if(guess1.contains("eo")) {
+			JOptionPane.showMessageDialog(null, "Correct");
+			score+=1; 	window.setTitle("Score = "+ score);
+		}
+		else{
+			JOptionPane.showMessageDialog(null, "INcorrect\nAnswer: Leonardo DiCaprio");
+		
+		}
+		showNextImage();
+		String guess2 = JOptionPane.showInputDialog("who is this?(First Name)");
+		if(guess2.contains("organ")) {
+			JOptionPane.showMessageDialog(null, "Correct");
+			score+=1; 	window.setTitle("Score = "+ score);
+		}
+		else{
+			JOptionPane.showMessageDialog(null, "INcorrect\nAnswer: Morgan Freeman");
+		
+		}showNextImage();
+		String guess3 = JOptionPane.showInputDialog("who is this?(First Name)");
+		if(guess3.contains("Jack")) {
+			JOptionPane.showMessageDialog(null, "Correct");
+			score+=1; 	window.setTitle("Score = "+ score);
+		}
+		else{
+			JOptionPane.showMessageDialog(null, "INcorrect\nAnswer: Jack Black");
+		
+		}// 8. .... repeat 4-7 for all your images.....
 
 		// 9. Show them their current score
 
