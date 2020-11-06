@@ -26,7 +26,7 @@ public class DuelingButtons implements ActionListener {
 	int leftClicks = 0;
 	int rightClicks = 0;
 	public void run() {
-		frame.setSize(200, 200);
+	
 		// 1. Add the panel to the frame
 		frame.add(panel);
 		// 2. Make the frame visible
